@@ -61,6 +61,13 @@ client.on( 'message', message => {
 });
 
 client.on('presenceUpdate', ( oldMember, newMember ) => {
+
+	console.log(`presenceUpdate`);
+	console.log(`  oldMember=${oldMember}`);
+	console.log(`  newMember=${newMember}`);
+	console.log(`  oldUserChannel=${oldUserChannel}`);
+	console.log(`  newUserChannel=${newUserChannel}`);
+
 	let newUserChannel = newMember.voiceChannel
 	let oldUserChannel = oldMember.voiceChannel
 
