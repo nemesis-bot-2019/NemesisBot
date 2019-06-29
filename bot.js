@@ -1,5 +1,5 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
+const { Client, MessageAttachment } = require('discord.js');
+const client = new Client();
 
 console.log(`Nemesis Starting...`);
 
@@ -44,13 +44,13 @@ client.on( 'message', message => {
 
 		if (text.includes('selfie')) {
 			message.channel.send('*SPAN*');	
-			message.channel.send(new Discord.Attachment('https://www.dropbox.com/s/nmvxz8jdxf23dwv/nemesis-1.jpg?dl=1', 'nemesis.jpg'))
+			message.channel.send(new MessageAttachment('https://www.dropbox.com/s/nmvxz8jdxf23dwv/nemesis-1.jpg?dl=1', 'nemesis.jpg'))
 			return;
 		}
 
 		if (text.includes('personal selfie')) {
 			message.send('*SPAN*');	
-			message.send(new Discord.Attachment('https://www.dropbox.com/s/nmvxz8jdxf23dwv/nemesis-1.jpg?dl=1', 'nemesis.jpg'))
+			message.send(new MessageAttachment('https://www.dropbox.com/s/nmvxz8jdxf23dwv/nemesis-1.jpg?dl=1', 'nemesis.jpg'))
 			return;
 		}
 
