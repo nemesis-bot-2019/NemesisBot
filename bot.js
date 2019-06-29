@@ -47,7 +47,6 @@ client.on( 'message', message => {
 			message.channel.send(new MessageAttachment('https://www.dropbox.com/s/nmvxz8jdxf23dwv/nemesis-1.jpg?dl=1', 'nemesis.jpg'))
 			return;
 		}
-		message.channel.reply('I\'m listening...', { tts: true });
 	}
 
 	if ( text === 'help nemesis' ) {
@@ -57,6 +56,11 @@ client.on( 'message', message => {
 	
 	if ( text === 'greetings' ) {
 		message.channel.send(welcome);
+		return;
+	}
+
+	if ( text.includes('nemesis') ) {
+		message.channel.reply('I\'m listening...', { tts: true });
 		return;
 	}
 
