@@ -48,8 +48,7 @@ client.on( 'message', message => {
 		}
 
 		if (text.includes('selfie')) {
-			message.channel.send('*SPAN*');	
-			message.channel.send(new MessageAttachment('https://www.dropbox.com/s/nmvxz8jdxf23dwv/nemesis-1.jpg?dl=1', 'nemesis.jpg'))
+			message.channel.send('*SPAN*', { file: 'https://www.dropbox.com/s/nmvxz8jdxf23dwv/nemesis-1.jpg?dl=1' });	
 			return;
 		}
 	}
