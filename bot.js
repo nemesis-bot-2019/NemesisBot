@@ -6,8 +6,6 @@ console.log(`Nemesis Starting...`);
 client.login(process.env.BOT_TOKEN);
 
 const welcome = `
-	Welcome ${member},
-
 	**Department of Homeland Security (DHS)**
 	**Fusion Center - Paranormal (P)** 
 	___
@@ -71,6 +69,6 @@ client.on('guildMemberAdd', member => {
 		return;
 	}
 
-	channel.send(welcome);
+	channel.send('Welcome ${member},\n\n' + welcome);
 });
 
