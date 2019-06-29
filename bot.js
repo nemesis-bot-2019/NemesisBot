@@ -1,5 +1,5 @@
-const { Client, Attachment } = require('discord.js');
-const client = new Client();
+const Discord = require('discord.js');
+const client = new Discord.Client();
 
 console.log(`Nemesis Starting...`);
 
