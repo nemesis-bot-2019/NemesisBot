@@ -33,12 +33,12 @@ client.on( 'message', message => {
 		}
 
 		if (text.includes('who\'s the')) {
-			message.reply('bigAPE... duh.');
+			message.channel.reply('bigAPE... duh.');
 			return;
 		}
 
 		if (text.includes('eat chote')) {
-			message.reply('\nMmmmmm... tasty, tasty Chote. \n\*NOM!\* \*NOM!\* \*NOM!\* \nDelicious.');
+			message.channel.reply('\nMmmmmm... tasty, tasty Chote. \n\*NOM!\* \*NOM!\* \*NOM!\* \nDelicious.');
 			return;
 		}
 
@@ -47,18 +47,11 @@ client.on( 'message', message => {
 			message.channel.send(new MessageAttachment('https://www.dropbox.com/s/nmvxz8jdxf23dwv/nemesis-1.jpg?dl=1', 'nemesis.jpg'))
 			return;
 		}
-
-		if (text.includes('personal selfie')) {
-			message.send('*SPAN*');	
-			message.send(new MessageAttachment('https://www.dropbox.com/s/nmvxz8jdxf23dwv/nemesis-1.jpg?dl=1', 'nemesis.jpg'))
-			return;
-		}
-
-		message.reply('I\'m listening...', { tts: true });
+		message.channel.reply('I\'m listening...', { tts: true });
 	}
 
 	if ( text === 'help nemesis' ) {
-		message.reply('Options:\n* Trying asking Nemesis for a selfie.\n* Ask her to each Chote.');
+		message.channel.reply('Options:\n* Trying asking Nemesis for a selfie.\n* Ask her to each Chote.');
 		return;
 	}
 	
