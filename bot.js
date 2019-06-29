@@ -66,7 +66,7 @@ client.on('presenceUpdate', ( oldMember, newMember ) => {
 
 	//if ( oldUserChannel === undefined && newUserChannel !== undefined ) {
 
-	console.log(`${newMember.name} joined channel ${newUserChannel.name}`);
+	console.log(`${newMember.name} joined channel ${newUserChannel}`);
 
 	if ( newUserChannel !== undefined ) {
 		// User Joins a voice channel
