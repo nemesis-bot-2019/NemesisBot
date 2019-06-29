@@ -5,15 +5,6 @@ console.log(`Nemesis Starting...`);
 
 client.login(process.env.BOT_TOKEN);
 
-const welcome = `
-**Department of Homeland Security (DHS) - Fusion Center Paranormal (P)** 
-
-Rules:
-* Dont make fun of bigAPE
-* Be kind to Chote
-* Checkout awesome books at http://BewareOfMonsters.com
-`;
-
 
 client.on( 'ready', () => {
 	console.log(`Nemesis: Logged in as ${client.user.tag}!`);
@@ -53,7 +44,7 @@ client.on( 'message', message => {
 	}
 
 	if ( text === 'help nemesis' ) {
-		message.reply('Options:\n* Trying asking Nemesis for a selfie.\n* Ask her to each Chote.');
+		message.channel.send('Options:\n* Trying asking Nemesis for a selfie.\n* Ask her to each Chote.');
 		return;
 	}
 	
@@ -78,4 +69,27 @@ client.on('guildMemberAdd', member => {
 
 	channel.send('Welcome ${member},\n\n' + welcome);
 });
+
+
+
+
+const welcome = `
+**Department of Homeland Security (DHS) - Fusion Center Paranormal (P)** 
+
+Rules:
+* Dont make fun of bigAPE
+* Be kind to Chote
+* Checkout awesome books at http://BewareOfMonsters.com
+`;
+
+
+const help = `
+**Department of Homeland Security (DHS) - Fusion Center Paranormal (P)** 
+
+Options:
+* Prefix requests with \"Nemesis\"
+* Say her name
+* Ask her for a selfie
+`;
+
 
