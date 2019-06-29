@@ -9,6 +9,9 @@ client.on('message', message => {
 	if (message.content === 'Nemesis') {
 		message.reply('GRRRAW!!');
 	}
+	if (message.content === 'Nemesis eat Chote') {
+		message.reply('Mmmmmm... tasty, tasty Chote. *NOM*');
+	}
 });
 
 console.log(`Nemesis Starting...`);
