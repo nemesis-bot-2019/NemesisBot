@@ -7,12 +7,11 @@ client.login(process.env.BOT_TOKEN);
 
 const welcome = `
 **Department of Homeland Security (DHS) - Fusion Center Paranormal (P)** 
-___
+
 Rules:
 * Dont make fun of bigAPE
 * Be kind to Chote
-* Checkout awesome books at BewareOfMonsters.com 
-  * http://BewareOfMonsters.com
+* Checkout awesome books at http://BewareOfMonsters.com
 `;
 
 
