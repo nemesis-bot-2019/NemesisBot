@@ -59,7 +59,7 @@ client.on( 'message', message => {
 	}
 	
 	if ( text === 'greetings' ) {
-		message.reply(welcome);
+		message.channel.reply(welcome);
 		return;
 	}
 
