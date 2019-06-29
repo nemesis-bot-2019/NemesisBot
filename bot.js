@@ -6,12 +6,12 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-	message.reply('I am watching...');
+	console.log(`Nemesis Hears: ` + message);
 	if (message.content === 'Nemesis') {
 		message.reply('GRRRAW!!');
 	}
 });
 
 console.log(`Nemesis Starting...`);
-client.login('g0UHaSGu52AYjtOvS_aRh5dWqxSWJBTo');
+client.login('NTk0MzY1MDg1ODE2NzE3MzMz.XRbrww.ntKq2Rekoy3jkGJwA9y88y3zE0Y');
 // client.login(process.env.BOT_TOKEN);
