@@ -10,22 +10,22 @@ client.on( 'ready', () => {
 });
 
 
-client.on( 'message', msg => {
+client.on( 'message', message => {
 
-	var message = msg.content.toLowerCase();
-	if ( message.startsWith('nemesis') ) {
+	var text = message.content.toLowerCase();
+	if ( text.startsWith('nemesis') ) {
 
-		if ( message === 'nemesis' ) {
+		if ( text === 'nemesis' ) {
 			message.reply('GRRRAW!!');
 			return;
 		}
 
-		if (message.includes('eat chote')) {
+		if (text.includes('eat chote')) {
 			message.reply('Mmmmmm... tasty, tasty Chote. \*NOM!\* \*NOM!\* \*NOM!\* Delicious.');
 			return;
 		}
 
-		
+
 
 
 		message.reply('I\'m listening...');
