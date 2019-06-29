@@ -48,7 +48,7 @@ client.on( 'message', message => {
 		}
 
 		if (text.includes('selfie')) {
-			message.channel.send('*SPAN*', { file: 'https://www.dropbox.com/s/nmvxz8jdxf23dwv/nemesis-1.jpg?dl=1' });	
+			message.channel.send('*SPAN*', { file: 'https://previews.dropbox.com/p/thumb/AAdQf9KsWdCvkN7Z7yaEn7qgpf0VUcgV0ZJwDso4ou7A5pl0lYSZDcZE5hSNeGQRebBx1L4daID8EpSawKPzuMyNSHQsql1_qTHawcpVxFSUmmHWsTZmecL_USmakld327tDx05PCdciNiN5LMM7OJVxvxGyY4qaf3YyVaFm0wA-9tMlx-FDWITiVSAjQAYtfhRmM1yJtRwAmhkT7VVdLucwo4QYgplI5CkI4H6aXG6R48iSSv9576NO1unhp0hFy-74gtR_h3bEiBaHP-WDOXmvP0JKmJmJ4zgW4EkOz_TQuDRVYRqlqaCvrcP1mmRgpHZImq91l1IpldbBEbPUwQ5EO72mNc0pJKC3FoXUyWcqTSrY27PW7xYsgZY0XHUv1i4byR_rVmO66ZAgZi9tyh52OzPhsoNovTiNNMO0TSR43bVBmqRuFNzDP-PMvYDdh2KZvbtCkGvJeq2K1XX6YfnF/p.jpeg' });	
 			return;
 		}
 	}
