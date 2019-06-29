@@ -72,13 +72,16 @@ client.on('guildMemberAdd', member => {
 
 client.on('presenceUpdate', ( oldMember, newMember ) => {
 
-	const channel = member.guild.channels.find(ch => ch.name === 'member-log');
+	let newUserChannel = newMember.voiceChannel
+	let oldUserChannel = oldMember.voiceChannel
 
-	if (!channel) {
-		return;
+	//if ( oldUserChannel === undefined && newUserChannel !== undefined ) {
+
+	if ( newUserChannel !== undefined ) {
+		// User Joins a voice channel
+		console.log(`Nemesis: ${newMember.name} joined channel ${newUserChannel.name}`);
 	}
 
-	channel.send('Welcome ${member},\n\n' + welcome);
 });
 
 
