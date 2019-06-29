@@ -2,7 +2,20 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 console.log(`Nemesis Starting...`);
+
 client.login(process.env.BOT_TOKEN);
+
+const welcome = `
+	Welcome ${member},
+
+	**Department of Homeland Security (DHS)**
+	**Fusion Center - Paranormal (P)** 
+	___
+	Rules:
+	* Dont make fun of bigAPE
+	* Be kind to Chote
+	* Checkout [BewareOfMonsters.com](http://BewareOfMonsters.com)
+`;
 
 
 client.on( 'ready', () => {
@@ -52,18 +65,6 @@ client.on('guildMemberAdd', member => {
 		return;
 	}
 
-	var welcome = `
-		Welcome ${member},
-
-		**Department of Homeland Security (DHS)**
-		**Fusion Center - Paranormal (P)** 
-		___
-		Rules:
-		* Dont make fun of bigAPE
-		* Be kind to Chote
-		* Checkout [BewareOfMonsters.com](http://BewareOfMonsters.com)
-	`;
-	
-	channel.send(`\n======================================, `);
+	channel.send(welcome);
 });
 
