@@ -40,7 +40,7 @@ client.on( 'message', message => {
 	}
 
 	if ( text === 'help nemesis' ) {
-		message.reply('Trying asking Nemesis for a selfie.');
+		message.reply('Options:\n* Trying asking Nemesis for a selfie.\n* Ask her to each Chote.');
 	}
 
 });
