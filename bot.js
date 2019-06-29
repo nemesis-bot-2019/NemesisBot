@@ -43,7 +43,7 @@ client.on( 'message', message => {
 		}
 
 		if (text.includes('selfie')) {
-			channel.send('*SPAN*');	
+			message.channel.send('*SPAN*');	
 	        const attachment = new Attachment('https://www.dropbox.com/s/nmvxz8jdxf23dwv/nemesis-1.jpg?dl=1');
 	        message.channel.send(attachment);
 		}
@@ -57,7 +57,7 @@ client.on( 'message', message => {
 	}
 	
 	if ( text === 'greetings' ) {
-		channel.send(welcome);
+		message.channel.send(welcome);
 		return;
 	}
 
