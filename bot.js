@@ -57,7 +57,6 @@ client.on( 'message', message => {
 		message.channel.send('I\'m listening...', { tts: true });
 		return;
 	}
-
 });
 
 client.on( 'guildMemberAdd', (member) => {
@@ -69,17 +68,20 @@ client.on( 'presenceUpdate', (oldMember, newMember) => {
 
 	console.log('presenceUpdate');
 	console.log(`  oldMember=${oldMember}`);
+	console.log(`  oldMember=${oldMember.name}`);
 	console.log(`  newMember=${newMember}`);
-	console.log(`  oldUserChannel=${oldUserChannel}`);
-	console.log(`  newUserChannel=${newUserChannel}`);
+	console.log(`  newMember=${newMember.name}`);
 
 	let newUserChannel = newMember.voiceChannel
 	let oldUserChannel = oldMember.voiceChannel
 
-	//if ( oldUserChannel === undefined && newUserChannel !== undefined ) {
+	if ( oldUserChannel !== undefined ) {
+		console.log(`  oldUserChannel=${oldUserChannel}`);
+		console.log(`  oldUserChannel=${oldUserChannel.name}`);
+	}
 	if ( newUserChannel !== undefined ) {
-		// User Joins a voice channel
-		console.log(`Nemesis: ${newMember.name} joined channel ${newUserChannel.name}`);
+		console.log(`  newUserChannel=${newUserChannel}`);
+		console.log(`  newUserChannel=${newUserChannel.name}`);
 	}
 
 });
