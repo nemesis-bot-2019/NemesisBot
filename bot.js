@@ -48,7 +48,7 @@ client.on( 'message', message => {
 		}
 
 		if (text.includes('selfie')) {
-			message.channel.send('*SPAN*', { file: 'https://i.pinimg.com/originals/25/69/03/256903626eaeba810b0615db5fc1327b.jpg' });	
+			message.channel.send('*SNAP!*', { file: 'https://i.pinimg.com/originals/25/69/03/256903626eaeba810b0615db5fc1327b.jpg' });	
 			return;
 		}
 	}
