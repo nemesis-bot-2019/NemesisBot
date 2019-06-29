@@ -36,7 +36,7 @@ client.on( 'message', message => {
 	        message.channel.send(`${message.author},`, attachment);
 		}
 
-		message.reply('I\'m listening...');
+		message.reply('I\'m listening...', { tts: true });
 	}
 
 	if ( text === 'help nemesis' ) {
