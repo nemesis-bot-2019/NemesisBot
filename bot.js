@@ -42,6 +42,11 @@ client.on( 'message', message => {
 			return;
 		}
 
+		if (text.includes('eat bigape')) {
+			message.channel.send('\nGet stuffed. He\'s my dope homeboy.');
+			return;
+		}
+
 		if (text.includes('selfie')) {
 			message.channel.send('*SPAN*');	
 			message.channel.send(new MessageAttachment('https://www.dropbox.com/s/nmvxz8jdxf23dwv/nemesis-1.jpg?dl=1', 'nemesis.jpg'))
