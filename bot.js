@@ -32,11 +32,11 @@ client.on( 'message', message => {
 		}
 
 		if (text.includes('selfie')) {
-	        const attachment = new Attachment('./resources/nemesis-1.jpg');
-	        message.channel.send(`${message.author},`, attachment);
+	        const attachment = new Attachment('https://www.dropbox.com/s/nmvxz8jdxf23dwv/nemesis-1.jpg?dl=1');
+	        message.channel.send(attachment);
 		}
 
-		message.reply('I\'m listening...', { tts: true });
+		message.channel.reply('I\'m listening...', { tts: true });
 	}
 
 	if ( text === 'help nemesis' ) {
