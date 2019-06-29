@@ -6,13 +6,13 @@ console.log(`Nemesis Starting...`);
 client.login(process.env.BOT_TOKEN);
 
 const welcome = `
-	**Department of Homeland Security (DHS)**
-	**Fusion Center - Paranormal (P)** 
+	**Department of Homeland Security (DHS) - Fusion Center Paranormal (P)** 
 	___
 	Rules:
 	* Dont make fun of bigAPE
 	* Be kind to Chote
-	* Checkout [BewareOfMonsters.com](http://BewareOfMonsters.com)
+	* Checkout awesome books at BewareOfMonsters.com 
+	  * http://BewareOfMonsters.com
 `;
 
 
@@ -28,7 +28,7 @@ client.on( 'message', message => {
 	if ( text.startsWith('nemesis') ) {
 
 		if ( text === 'nemesis' ) {
-			message.reply('GRRRAW!!');
+			message.channel.reply('GRRRAW!!');
 			return;
 		}
 
@@ -44,8 +44,14 @@ client.on( 'message', message => {
 
 		if (text.includes('selfie')) {
 			message.channel.send('*SPAN*');	
-	        const attachment = new Attachment('https://www.dropbox.com/s/nmvxz8jdxf23dwv/nemesis-1.jpg?dl=1');
-	        message.channel.send(attachment);
+			message.channel.send(new Discord.Attachment('https://www.dropbox.com/s/nmvxz8jdxf23dwv/nemesis-1.jpg?dl=1', 'nemesis.jpg'))
+			return;
+		}
+
+		if (text.includes('personal selfie')) {
+			message.send('*SPAN*');	
+			message.send(new Discord.Attachment('https://www.dropbox.com/s/nmvxz8jdxf23dwv/nemesis-1.jpg?dl=1', 'nemesis.jpg'))
+			return;
 		}
 
 		message.reply('I\'m listening...', { tts: true });
