@@ -45,3 +45,25 @@ client.on( 'message', message => {
 
 });
 
+client.on('guildMemberAdd', member => {
+	const channel = member.guild.channels.find(ch => ch.name === 'member-log');
+
+	if (!channel) {
+		return;
+	}
+
+	var welcome = `
+		Welcome ${member},
+
+		**Department of Homeland Security (DHS)**
+		**Fusion Center - Paranormal (P)** 
+		___
+		Rules:
+		* Dont make fun of bigAPE
+		* Be kind to Chote
+		* Checkout [BewareOfMonsters.com](http://BewareOfMonsters.com)
+	`;
+	
+	channel.send(`\n======================================, `);
+});
+
