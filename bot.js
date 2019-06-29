@@ -70,6 +70,17 @@ client.on('guildMemberAdd', member => {
 	channel.send('Welcome ${member},\n\n' + welcome);
 });
 
+client.on('presenceUpdate', ( oldMember, newMember ) => {
+
+	const channel = member.guild.channels.find(ch => ch.name === 'member-log');
+
+	if (!channel) {
+		return;
+	}
+
+	channel.send('Welcome ${member},\n\n' + welcome);
+});
+
 
 
 
