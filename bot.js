@@ -38,7 +38,7 @@ client.on( 'message', message => {
 		}
 
 		if (text.includes('eat chote')) {
-			message.reply('Mmmmmm... tasty, tasty Chote. \*NOM!\* \*NOM!\* \*NOM!\* Delicious.');
+			message.reply('\nMmmmmm... tasty, tasty Chote. \n\*NOM!\* \*NOM!\* \*NOM!\* \nDelicious.');
 			return;
 		}
 
