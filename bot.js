@@ -28,17 +28,17 @@ client.on( 'message', message => {
 	if ( text.startsWith('nemesis') ) {
 
 		if ( text === 'nemesis' ) {
-			message.channel.reply('GRRRAW!!');
+			message.channel.send('GRRRAW!!');
 			return;
 		}
 
 		if (text.includes('who\'s the')) {
-			message.channel.reply('bigAPE... duh.');
+			message.channel.send('bigAPE... duh.');
 			return;
 		}
 
 		if (text.includes('eat chote')) {
-			message.channel.reply('\nMmmmmm... tasty, tasty Chote. \n\*NOM!\* \*NOM!\* \*NOM!\* \nDelicious.');
+			message.channel.send('\nMmmmmm... tasty, tasty Chote. \n\*NOM!\* \*NOM!\* \*NOM!\* \nDelicious.');
 			return;
 		}
 
@@ -50,17 +50,17 @@ client.on( 'message', message => {
 	}
 
 	if ( text === 'help nemesis' ) {
-		message.channel.reply('Options:\n* Trying asking Nemesis for a selfie.\n* Ask her to each Chote.');
+		message.reply('Options:\n* Trying asking Nemesis for a selfie.\n* Ask her to each Chote.');
 		return;
 	}
 	
 	if ( text === 'greetings' ) {
-		message.channel.send(welcome);
+		message.reply(welcome);
 		return;
 	}
 
 	if ( text.includes('nemesis') ) {
-		message.channel.reply('I\'m listening...', { tts: true });
+		message.channel.send('I\'m listening...', { tts: true });
 		return;
 	}
 
