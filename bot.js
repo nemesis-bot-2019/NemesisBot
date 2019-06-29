@@ -54,6 +54,12 @@ client.on( 'message', message => {
 
 	if ( text === 'help nemesis' ) {
 		message.reply('Options:\n* Trying asking Nemesis for a selfie.\n* Ask her to each Chote.');
+		return;
+	}
+	
+	if ( text === 'greetings' ) {
+		channel.send(welcome);
+		return;
 	}
 
 });
