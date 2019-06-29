@@ -60,9 +60,14 @@ client.on( 'message', message => {
 
 });
 
-client.on('presenceUpdate', ( oldMember, newMember ) => {
+client.on( 'guildMemberAdd', (member) => {
+	console.log('guildMemberAdd');
+	console.log(`  member=${member}`);
+});
 
-	console.log(`presenceUpdate`);
+client.on( 'presenceUpdate', (oldMember, newMember) => {
+
+	console.log('presenceUpdate');
 	console.log(`  oldMember=${oldMember}`);
 	console.log(`  newMember=${newMember}`);
 	console.log(`  oldUserChannel=${oldUserChannel}`);
@@ -72,9 +77,6 @@ client.on('presenceUpdate', ( oldMember, newMember ) => {
 	let oldUserChannel = oldMember.voiceChannel
 
 	//if ( oldUserChannel === undefined && newUserChannel !== undefined ) {
-
-	console.log(`${newMember.name} joined channel ${newUserChannel}`);
-
 	if ( newUserChannel !== undefined ) {
 		// User Joins a voice channel
 		console.log(`Nemesis: ${newMember.name} joined channel ${newUserChannel.name}`);
