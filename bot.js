@@ -12,4 +12,6 @@ client.on('message', message => {
 	}
 });
 
-client.login(process.env.BOT_TOKEN);
+console.log(`Nemesis Starting...`);
+client.login('g0UHaSGu52AYjtOvS_aRh5dWqxSWJBTo');
+// client.login(process.env.BOT_TOKEN);
