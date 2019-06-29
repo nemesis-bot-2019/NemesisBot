@@ -6,7 +6,6 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-	console.log(`Nemesis Hears: ` + message);
 	if (message.content === 'Nemesis') {
 		message.reply('GRRRAW!!');
 	}
