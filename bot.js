@@ -13,6 +13,7 @@ client.on( 'ready', () => {
 client.on( 'message', message => {
 
 	var text = message.content.toLowerCase();
+
 	if ( text.startsWith('nemesis') ) {
 
 		if ( text === 'nemesis' ) {
@@ -38,10 +39,9 @@ client.on( 'message', message => {
 		message.reply('I\'m listening...');
 	}
 
-	if ( text === 'help nemesis=' ) {
+	if ( text === 'help nemesis' ) {
 		message.reply('Trying asking Nemesis for a selfie.');
 	}
-
 
 });
 
