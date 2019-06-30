@@ -64,29 +64,31 @@ client.on( 'message', message => {
 });
 
 client.on( 'guildMemberAdd', (member) => {
-	console.log('guildMemberAdd');
-	console.log(`  member=${member}`);
+
+	//console.log('guildMemberAdd');
+	//console.log(`  member=${member}`);
+
 });
 
 client.on( 'presenceUpdate', (oldMember, newMember) => {
 
-	let newUserChannel = newMember.voiceChannel
-	let oldUserChannel = oldMember.voiceChannel
+	//let oldUserChannel = oldMember.voiceChannel
+	// let newUserChannel = newMember.voiceChannel
 
-	let username = newMember.user.username
-	let currentGame = newMember.user.presence.game
-	let currentStatus = newMember.user.presence.status
+	// let username = newMember.user.username
+	// let currentGame = newMember.user.presence.game
+	// let currentStatus = newMember.user.presence.status
 
-	console.log(`presenceUpdate: ${username}` );
-	console.log(`  Status: ${currentStatus}` );
-	console.log(`  Channel: ` + (newUserChannel !== undefined ? newUserChannel.name : 'unknown') );
-	console.log(`  Game: ` + (currentGame !== undefined ? currentGame.name : "none") );
+	// console.log(`presenceUpdate: ${username}` );
+	// console.log(`  Status: ${currentStatus}` );
+	// console.log(`  Channel: ` + (newUserChannel !== undefined ? newUserChannel.name : 'unknown') );
+	// console.log(`  Game: ` + (currentGame !== undefined ? currentGame.name : 'none') );
 
-	if ( newUserChannel !== undefined && newUserChannel.name === "ROE" && (oldUserChannel === undefined || oldUserChannel.name !== "ROE") ) {
-		console.log(`${username} Joined Channel ${newUserChannel.name}`);
-		let textChannel = client.channels.get("378372436435009537");
-		textChannel.send('Nemesis welcomes ${newUserChannel.name} to the fight', { tts: true });
-	}
+	// if ( newUserChannel !== undefined && newUserChannel.name === "ROE" && (oldUserChannel === undefined || oldUserChannel.name !== "ROE") ) {
+	// 	console.log(`${username} Joined Channel ${newUserChannel.name}`);
+	// 	let textChannel = client.channels.get("378372436435009537");
+	// 	textChannel.send('Nemesis welcomes ${newUserChannel.name} to the fight', { tts: true });
+	// }
 
 });
 
