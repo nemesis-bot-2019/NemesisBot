@@ -44,7 +44,7 @@ client.on( 'message', message => {
 	}
 
 	if ( text === 'help nemesis' ) {
-		message.channel.send('Options:\n* Trying asking Nemesis for a selfie.\n* Ask her to each Chote.');
+		message.channel.send(help);
 		return;
 	}
 	
@@ -68,9 +68,9 @@ client.on( 'presenceUpdate', (oldMember, newMember) => {
 
 	console.log('presenceUpdate');
 	console.log(`  oldMember=${oldMember}`);
-	console.log(`  oldMember=${oldMember.name}`);
+	console.log(`  oldMember=${oldMember.user.username}`);
 	console.log(`  newMember=${newMember}`);
-	console.log(`  newMember=${newMember.name}`);
+	console.log(`  newMember=${newMember.user.username}`);
 
 	let newUserChannel = newMember.voiceChannel
 	let oldUserChannel = oldMember.voiceChannel
