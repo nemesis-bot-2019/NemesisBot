@@ -73,27 +73,18 @@ client.on( 'presenceUpdate', (oldMember, newMember) => {
 	let newUserChannel = newMember.voiceChannel
 	let oldUserChannel = oldMember.voiceChannel
 
-	console.log(`presenceUpdate: ${newMember.user.username}`);
-	console.log(`  Status: ${newMember.user.presence.status}`);
-
-	if ( newUserChannel !== undefined ) {
-		console.log(`  Channel: ${newUserChannel.name}`);
-	} else {
-		console.log(`  Channel: unknown`);
-	}
-
+	let username = newMember.user.username
 	let currentGame = newMember.user.presence.game
-	if ( currentGame !== undefined ) {
-		console.log(`  Game: ${currentGame.name}`);
-	}
+	let currentStatus = newMember.user.presence.status
 
-	let textChannel = client.channels.get("378372436435009537");
-	//if ( textChannel !== undefined ) {
-	//	textChannel.send(`Nemesis says ${newMember.user.username} is now ${newMember.user.presence.status}` + (currentGame !== undefined ? ' playing ' + currentGame.name : ''));
-	//}
+	console.log(`presenceUpdate: ${username}` );
+	console.log(`  Status: ${currentStatus}` );
+	console.log(`  Channel: ` + (newUserChannel !== undefined ? newUserChannel.name : 'unknown') );
+	console.log(`  Game: ` + (currentGame !== undefined ? currentGame.name : "none") );
 
 	if ( newUserChannel !== undefined && newUserChannel.name === "ROE" && (oldUserChannel === undefined || oldUserChannel.name !== "ROE") ) {
-		console.log(`${newMember.user.username} Joined Channel ${newUserChannel.name}`);
+		console.log(`${username} Joined Channel ${newUserChannel.name}`);
+		let textChannel = client.channels.get("378372436435009537");
 		textChannel.send('Nemesis welcomes ${newUserChannel.name} to the fight', { tts: true });
 	}
 
