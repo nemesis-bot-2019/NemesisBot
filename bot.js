@@ -88,9 +88,9 @@ client.on( 'presenceUpdate', (oldMember, newMember) => {
 	}
 
 	let textChannel = client.channels.get("378372436435009537");
-	if ( textChannel !== undefined ) {
-		textChannel.send(`Nemesis says ${newMember.user.username} is now ${newMember.user.presence.status}` + (currentGame !== undefined ? ' playing ' + currentGame.name : ''));
-	}
+	//if ( textChannel !== undefined ) {
+	//	textChannel.send(`Nemesis says ${newMember.user.username} is now ${newMember.user.presence.status}` + (currentGame !== undefined ? ' playing ' + currentGame.name : ''));
+	//}
 
 	if ( newUserChannel !== undefined && newUserChannel.name === "ROE" && (oldUserChannel === undefined || oldUserChannel.name !== "ROE") ) {
 		console.log(`${newMember.user.username} Joined Channel ${newUserChannel.name}`);
