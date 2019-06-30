@@ -66,19 +66,31 @@ client.on( 'guildMemberAdd', (member) => {
 
 client.on( 'presenceUpdate', (oldMember, newMember) => {
 
-	console.log('presenceUpdate');
-	console.log(`  oldMember=${oldMember.user.username}`);
-	console.log(`  newMember=${newMember.user.username}`);
-
 	let newUserChannel = newMember.voiceChannel
 	let oldUserChannel = oldMember.voiceChannel
 
-	if ( oldUserChannel !== undefined ) {
-		console.log(`  oldUserChannel=${oldUserChannel.name}`);
-	}
-	
+	console.log(`presenceUpdate: ${newMember.user.username}`);
+
+	console.log(`  Old`);
+	console.log(`    Status: ${oldMember.user.presence.status}`);
 	if ( newUserChannel !== undefined ) {
-		console.log(`  newUserChannel=${newUserChannel.name}`);
+		console.log(`    Channel: unknown`);
+	} else {
+		console.log(`    Channel: ${oldUserChannel.name}`);
+	}
+
+	console.log(`  New`);
+	console.log(`    Status: ${newMember.user.presence.status}`);
+	if ( newUserChannel !== undefined ) {
+		console.log(`    Channel: unknown`);
+	} else {
+		console.log(`    Channel: ${newUserChannel.name}`);
+	}
+
+	if ( newUserChannel !== undefined && newUserChannel.name === "ROE" && (oldUserChannel === undefined || oldUserChannel.name !== "ROE") ) {
+		console.log(`${newMember.user.username} Joined Channel ${newUserChannel.name}`);
+		let textChannel = bot.channels.get("378372436435009537");
+		textChannel.send('Nemesis welcomes ${newUserChannel.name} to the fight', { tts: true });
 	}
 
 });
