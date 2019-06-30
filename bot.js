@@ -73,7 +73,7 @@ client.on( 'presenceUpdate', (oldMember, newMember) => {
 
 	console.log(`  Old`);
 	console.log(`    Status: ${oldMember.user.presence.status}`);
-	if ( newUserChannel !== undefined ) {
+	if ( oldUserChannel !== undefined ) {
 		console.log(`    Channel: unknown`);
 	} else {
 		console.log(`    Channel: ${oldUserChannel.name}`);
