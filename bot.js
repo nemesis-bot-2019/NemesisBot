@@ -13,6 +13,10 @@ client.on( 'ready', () => {
 
 client.on( 'message', message => {
 
+	if (message.author.bot) {
+		return;
+	}
+
 	var text = message.content.toLowerCase();
 
 	if ( text.startsWith('nemesis') ) {
@@ -54,7 +58,7 @@ client.on( 'message', message => {
 	}
 
 	if ( text.includes('nemesis') ) {
-		message.channel.send('I\'m listening...', { tts: true });
+		message.channel.send('I\'m listening...');
 		return;
 	}
 });
