@@ -70,21 +70,19 @@ client.on( 'presenceUpdate', (oldMember, newMember) => {
 	let oldUserChannel = oldMember.voiceChannel
 
 	console.log(`presenceUpdate: ${newMember.user.username}`);
-
 	console.log(`  Old`);
 	console.log(`    Status: ${oldMember.user.presence.status}`);
 	if ( oldUserChannel !== undefined ) {
-		console.log(`    Channel: unknown`);
-	} else {
 		console.log(`    Channel: ${oldUserChannel.name}`);
+	} else {
+		console.log(`    Channel: unknown`);
 	}
-
 	console.log(`  New`);
 	console.log(`    Status: ${newMember.user.presence.status}`);
 	if ( newUserChannel !== undefined ) {
-		console.log(`    Channel: unknown`);
-	} else {
 		console.log(`    Channel: ${newUserChannel.name}`);
+	} else {
+		console.log(`    Channel: unknown`);
 	}
 
 	if ( newUserChannel !== undefined && newUserChannel.name === "ROE" && (oldUserChannel === undefined || oldUserChannel.name !== "ROE") ) {
